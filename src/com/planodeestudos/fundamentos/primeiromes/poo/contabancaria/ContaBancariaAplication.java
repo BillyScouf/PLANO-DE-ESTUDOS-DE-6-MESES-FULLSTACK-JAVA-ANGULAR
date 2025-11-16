@@ -36,7 +36,7 @@ public class ContaBancariaAplication {
                         contaController.criarConta();
                         break;
                     case 2:
-                        // listarContas();
+                        contaController.listarContas();
                         break;
                     case 3:
                         // acessarContaPorNumero();

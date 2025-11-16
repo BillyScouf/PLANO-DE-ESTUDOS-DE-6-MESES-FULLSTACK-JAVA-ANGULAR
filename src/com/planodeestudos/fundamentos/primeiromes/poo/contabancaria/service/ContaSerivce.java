@@ -18,7 +18,7 @@ public class ContaSerivce {
     public void criarConta() throws InputMismatchException {
         try {
             System.out.println("Criando uma nova conta...");
-            System.out.print("Digite o seu nome: ");
+            System.out.print("Digite o seu numero de conta: ");
             int numeroDaConta = scanner.nextInt(); 
 
             System.out.println("Digite o saldo inicial: ");
@@ -47,6 +47,10 @@ public class ContaSerivce {
             System.out.println("Entrada inválida. Por favor, tente novamente.");
             scanner.nextLine(); // Limpar o buffer do scanner
         }
+    }
+
+    public List<Conta> listarContas() {
+        return contas;
     }
 
 }

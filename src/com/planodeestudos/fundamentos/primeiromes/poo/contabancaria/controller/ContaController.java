@@ -2,6 +2,7 @@ package com.planodeestudos.fundamentos.primeiromes.poo.contabancaria.controller;
 
 import com.planodeestudos.fundamentos.primeiromes.poo.contabancaria.entity.Conta;
 import com.planodeestudos.fundamentos.primeiromes.poo.contabancaria.service.ContaSerivce;
+import java.util.List;
 
 public class ContaController {
 
@@ -17,6 +18,20 @@ public class ContaController {
     public void criarConta() {
         contaService.criarConta();
         System.out.println("Conta criada com sucesso: " + contaService);
+    }
+
+    // Listar contas
+    public void listarContas() {
+        List<Conta> listaDeContas = contaService.listarContas();
+
+        if (listaDeContas.isEmpty()) {
+            System.out.println("Nenhuma conta cadastrada.");
+        } else {
+            System.out.println("=== Lista de Contas Cadastradas ===");
+            for (Conta conta : listaDeContas) {
+                System.out.println(conta);
+            }
+        }
     }
 
 }
