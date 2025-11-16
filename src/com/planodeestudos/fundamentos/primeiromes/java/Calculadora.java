@@ -1,4 +1,4 @@
-package com.planodeestudos.primeiromes;
+package com.planodeestudos.fundamentos.primeiromes.java;
 
 import java.util.NoSuchElementException;
 import java.util.Scanner;

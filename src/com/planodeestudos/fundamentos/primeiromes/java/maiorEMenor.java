@@ -1,4 +1,4 @@
-package com.planodeestudos.fundamentos;
+package com.planodeestudos.fundamentos.primeiromes.java;
 
 import java.util.Scanner;
 
