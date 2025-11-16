@@ -28,9 +28,9 @@ public class ContaController {
             System.out.println("Nenhuma conta cadastrada.");
         } else {
             System.out.println("=== Lista de Contas Cadastradas ===");
-            for (Conta conta : listaDeContas) {
-                System.out.println(conta);
-            }
+            listaDeContas.forEach(conta -> {
+                System.out.println("Número da Conta: " + conta.getNumeroConta() + "");
+            });
         }
     }
 

@@ -1,7 +1,6 @@
 package com.planodeestudos.fundamentos.primeiromes.poo.contabancaria;
 
 import com.planodeestudos.fundamentos.primeiromes.poo.contabancaria.controller.ContaController;
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -11,11 +10,35 @@ public class ContaBancariaAplication {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) { 
-        iniciarPrograma();
+        
+        try {
+            System.out.println("Iniciando o sistema de Conta Bancária...");
+            System.out.println("===============================");
+            System.out.println("1. Visualizar Titular");
+            System.out.println("2. Visualizar Conta Bancária");
+            System.out.println("===============================");
+            int escolherPerfil = scanner.nextInt();
 
+        switch (escolherPerfil) {
+            case 1 ->{
+                // iniciarProgramaTitular()
+            }
+                
+            case 2 ->{
+                iniciarProgramaConta();
+            }
+            default -> {
+                System.out.println("Opção inválida. Encerrando o sistema.");
+                return;
+            }
+        }
+        } catch (InputMismatchException e) {
+            System.out.println("Entrada inválida, escolha uma opção numérica. Encerrando o sistema.");
+            return;
+        }
     }
 
-    public static void iniciarPrograma() {
+    public static void iniciarProgramaConta() {
         try{
             System.out.println("Aplicação de Conta Bancária em POO");
         
@@ -32,27 +55,28 @@ public class ContaBancariaAplication {
                 int opcaoEscolhida = scanner.nextInt(); // Deve ser substituído pela leitura da entrada do usuário
 
                 switch (opcaoEscolhida) {
-                    case 1:
+                    case 1 -> {
                         contaController.criarConta();
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         contaController.listarContas();
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {         
                         // acessarContaPorNumero();
-                        break;
-                    case 4:
+                    }
+                    case 4 -> {
                         // atualizarDadosDaContaPorNumero();
-                        break;
-                    case 5:
+                    }
+                    case 5 -> {
                         // deletarContaPorNumero();
-                        break;
-                    case 6:
+                    }
+                    case 6 -> {     
                         System.out.println("Saindo do sistema...");
                         System.exit(0);
-                        return;
-                    default:
+                    }
+                    default -> {
                         System.out.println("Opção inválida. Tente novamente.");
+                    }
                 }
 
             } while (true); 
